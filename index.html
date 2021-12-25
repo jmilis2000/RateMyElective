@@ -5,24 +5,98 @@
         <title>RateMyElective</title>
         <meta charset="utf=8"/>
     </head>
+    
+    <style>
+        #nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(38, 171, 227);
+        }
+
+        #nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 10px;
+            text-decoration: none;
+            font-size: larger;
+            vertical-align: center;
+        }
+
+        a:hover {
+            background-color: grey;
+        }
+
+        .active {
+            background-color: rgb(179, 210, 55);
+        }
+
+        .active:hover {
+            background-color: rgb(179, 210, 55);
+            
+        }
+        .rmelogo {
+            float: left;
+            vertical-align: top;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+
+    </style>
 
     <body>
+        <!--Nav-->
+        <nav id="nav">
+            <a class="active" href="index.html"><span class="span-logo"><img src="RMElogo400200.jpg" class="rmelogo" alt="Rate My Elective logo"/></span></a>
+            <a href="login.html">Log In</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="search.html">Search</a>
+            
+        </nav>        
+        
         <!--Intro-->
-        <div id="intro">
+        <!--<div id="intro">
             <h1> RateMyElective<br>
                 The information site for reviews about courses offered at your university    
             </h1>
-        </div>
+        </div>-->
+        <h1>Submit a Rating</h1>
+        <div class="submitform">
+            <form action="#">
+                <label for="courseid">Course ID:</label>
+                <input type="text" id="courseid" name="courseid"></input><br>
+                <label for="university">University Name:</label>
+                <input type="text" id="university" name="university"></input><br>
+                
+                <label for="difficulty">Difficulty(between 1 and 5):</label>
+                <input type="number" id="difficulty" name="difficulty" min="1" max="5"></input><br>
+                <label for="rating">Rating(between 1 and 5):</label>
+                <input type="number" id="rating" name="rating" min="1" max="5"></input><br>
 
-        <!--Nav-->
-        <nav id="nav">
-            <ul class="links">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="login.html">Log In</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
-                <li><a href="search.html">Search</a></li>
-            </ul>
-        </nav>
+                <input type="submit" value="Submit">
+
+            </form>
+        </div>
+        <br><hr><br>
+
+        <h1>Search Ratings</h1>
+        <div class="searchform">
+            <form action="#">
+                <label for="courseid">Course ID:</label>
+                <input type="text" placeholder="Course ID"></input>
+                
+                <label for="university">University Name:</label>
+                <input type="text" placeholder="University"></input>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
 
 
 

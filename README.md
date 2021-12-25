@@ -18,7 +18,7 @@ FrontEnd
 <!-- end of list-->
 BackEnd
 - Java
-- SQL DB
+- Firestore Database
 ## Future Improvements
 Deploying the website.
 
